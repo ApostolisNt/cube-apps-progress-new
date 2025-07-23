@@ -1,0 +1,16 @@
+{
+  "scan": {
+    "braceletPlaceholder": "Scan your wristband",
+    "errors": {
+      "invalidCharacters": "Invalid characters in bracelet code",
+      "teamNotFound": "Team not found for this bracelet code",
+      "serverError": "Server error occurred while validating bracelet code"
+    }
+  },
+  "scan_for_activity": "Scan wristband for activity",
+  "modal": {
+    "ok": "OK",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  }
+}

@@ -1,0 +1,9 @@
+.task
+bin
+/dist
+/node_modules
+
+.env
+fast-registration.log
+# MACOS
+.DS_Store
