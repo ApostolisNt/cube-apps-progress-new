@@ -6,22 +6,32 @@ import HealthCheck from "./components/health-check";
 import LanguageDropdown from "./components/language-dropdown";
 import ProgressView from "./views/progress-view";
 import { useEffect } from "react";
-import { getLocation } from "./client/api/location";
+import { getGameMode, getLocation, getTimezone } from "./client/api/settings";
 
 export default function App() {
-  const { currentView, currentLanguage, setLocation } = useApp();
+  const {
+    currentView,
+    currentLanguage,
+    setLocation,
+    setTimezone,
+    setGameMode,
+  } = useApp();
 
   useEffect(() => {
     const fetchLocation = async () => {
       try {
         const location = await getLocation();
+        const timezone = await getTimezone();
+        const gameMode = await getGameMode();
         setLocation(location);
+        setTimezone(timezone);
+        setGameMode(gameMode);
       } catch (error) {
         console.error(`Failed to fetch location: ${error}`);
       }
     };
     fetchLocation();
-  }, [setLocation]);
+  }, [setLocation, setTimezone, setGameMode]);
 
   console.log(`Current view: ${currentView}`);
 

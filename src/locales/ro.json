@@ -1,1 +1,11 @@
-{}
+{
+    "scan_for_activity": "scanare după activitate",
+    "score": "punctaj",
+    "team_activity": "activitate de echipă",
+    "time_left": "timp rămas",
+    "welcome": "bun venit",
+    "room_points": "puncte",
+    "room_level": "nivel",
+    "room_tries": "încercări",
+    "close": "ÎNCHIDE"
+}

@@ -10,28 +10,25 @@ import Logo from "../components/progress-common/logo";
 
 const ProgressView = () => {
   const { teamData, resetToIdle } = useApp();
-  const finalRooms = roomsListsToShow(teamData?.rooms);
-
-  console.log("ProgressView rendered with teamData:", teamData);
-  console.log("Final rooms to display:", finalRooms);
+  const rooms = roomsListsToShow(teamData?.rooms);
 
   useEffect(() => {
     const interval = setInterval(() => {
       resetToIdle();
-    }, 5000);
+    }, 2000000);
 
     return () => clearInterval(interval);
   }, [resetToIdle]);
 
   return (
     <div
-      className="flex flex-col items-center justify-start h-screen py-[3vh] text-[#2efddb]"
+      className="flex flex-col items-center justify-start h-screen py-[3vh] text-cube-primary"
       data-testid="show-team-data"
     >
       <Logo />
 
-      <div className="w-[880px] border-2 border-[#2efddb] rounded-[7px] flex flex-col justify-center items-center mb-8 py-10 gap-8">
-        <div className="w-full h-[100px] flex justify-evenly items-start">
+      <div className="w-[880px] border-2 border-cube-primary rounded-[7px] flex flex-col justify-center items-center mb-8 py-10 gap-8">
+        <div className="w-full h-24 flex justify-evenly items-center">
           <TeamName />
           <TimeLeft />
           <TeamScore />
@@ -39,12 +36,12 @@ const ProgressView = () => {
         <PhotoGrid />
       </div>
 
-      {finalRooms.length > 0 && (
+      {rooms.length > 0 && (
         <div
-          className="relative w-[880px] border-2 border-[#2efddb] rounded-[7px] flex justify-evenly flex-wrap"
+          className="relative w-[880px] border-2 border-cube-primary rounded-[7px] flex justify-evenly flex-wrap"
           data-testid="rooms-list-wrapper"
         >
-          <RoomsList />
+          <RoomsList rooms={rooms} />
         </div>
       )}
     </div>

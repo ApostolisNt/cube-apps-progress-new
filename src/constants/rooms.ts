@@ -1,4 +1,3 @@
-// ? red: #ff0049
 export const redRooms = [
   "DANGER_MINEFIELD",
   "RESTRICTED_AREA",
@@ -14,8 +13,8 @@ export const redRooms = [
   "LOST_CITY",
   "LAVA_LAND",
   "LIGHT_FIELD",
-];
-// ? green #1dfe98
+] as const;
+
 export const greenRooms = [
   "RAINBOW_MIND",
   "SPOT_THE_DIFFERENCES",
@@ -26,8 +25,8 @@ export const greenRooms = [
   "GENIUS",
   "WORLDERLAND",
   "CANDIT",
-];
-// ? yellow #fff33e
+] as const;
+
 export const yellowRooms = [
   "SLINGSHOT_MADNESS",
   "SUBBUTEO",
@@ -47,8 +46,8 @@ export const yellowRooms = [
   "CRAZY_CIRCUIT",
   "SHOOTING_FARM",
   "HANGRY_MONKEY",
-];
-// ? purple #5d3883
+] as const;
+
 export const purpleRooms = [
   "GHOST_HUNTERS",
   "MAGIC_POTION",
@@ -56,4 +55,11 @@ export const purpleRooms = [
   "HORROR_ROUTE",
   "LAST_SENSE",
   "TIC_TAC_TOE",
-];
+] as const;
+
+export type PhysicalRoom = (typeof redRooms)[number];
+export type BrainRoom = (typeof greenRooms)[number];
+export type SkillsRoom = (typeof yellowRooms)[number];
+export type HorrorRoom = (typeof purpleRooms)[number];
+
+export type AllRooms = PhysicalRoom | BrainRoom | SkillsRoom | HorrorRoom;

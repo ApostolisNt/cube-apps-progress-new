@@ -1,1 +1,11 @@
-{}
+{
+    "scan_for_activity": "iščite aktivnost",
+    "score": "rezultat",
+    "team_activity": "aktivnost ekipe",
+    "time_left": "preostali čas",
+    "welcome": "dobrodošli",
+    "room_points": "točke",
+    "room_level": "nivo",
+    "room_tries": "poskusi",
+    "close": "NAZAJ"
+}

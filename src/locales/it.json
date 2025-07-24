@@ -1,1 +1,12 @@
-{}
+{
+    "scan_for_activity": "scansione per attività",
+    "score": "punti",
+    "team_activity": "attività di squadra",
+    "time_left": "tempo rimasto",
+    "welcome": "benvenuto",
+    "room_points": "punti",
+    "room_level": "livello",
+    "room_tries": "cerca",
+    "no_remaining_time": "00:00",
+    "close": "CHIUDERE"
+}

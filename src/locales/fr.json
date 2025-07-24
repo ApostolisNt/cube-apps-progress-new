@@ -1,1 +1,11 @@
-{}
+{
+    "scan_for_activity": "scannez ici pour voir vos scores et où vous en êtes",
+    "score": "score",
+    "team_activity": "activité d’équipe",
+    "time_left": "temps restant",
+    "welcome": "bienvenue",
+    "room_points": "points",
+    "room_level": "niveau",
+    "room_tries": "essaye",
+    "close": "FERMER"
+}

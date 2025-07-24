@@ -24,6 +24,10 @@ type AppContextType = {
   teamData: TeamProgress | undefined;
   setTeamData: Dispatch<SetStateAction<TeamProgress | undefined>>;
   resetToIdle: () => void;
+  timezone: string;
+  setTimezone: Dispatch<SetStateAction<string>>;
+  gameMode: "arena" | "arcade";
+  setGameMode: Dispatch<SetStateAction<"arena" | "arcade">>;
 };
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -46,6 +50,8 @@ export function AppProvider({ children }: Props) {
   const [teamName, setTeamName] = useState<string | null>(null);
   const [location, setLocation] = useState<string>("");
   const [teamData, setTeamData] = useState<TeamProgress | undefined>(undefined);
+  const [timezone, setTimezone] = useState<string>("");
+  const [gameMode, setGameMode] = useState<"arena" | "arcade">("arena");
 
   const resetToIdle = () => {
     setCurrentView(VIEWS.IDLE);
@@ -65,6 +71,10 @@ export function AppProvider({ children }: Props) {
     teamData,
     setTeamData,
     resetToIdle,
+    timezone,
+    setTimezone,
+    gameMode,
+    setGameMode,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

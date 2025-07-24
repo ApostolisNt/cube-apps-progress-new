@@ -1,1 +1,11 @@
-{}
+{
+  "scan_for_activity": "امسح ضوئيًا للبحث عن أنشطة",
+  "score": "النتيجة",
+  "team_activity": "نشاط الفريق",
+  "time_left": "الوقت المتبقي",
+  "welcome": "مرحبًا",
+  "room_points": "النقاط",
+  "room_level": "المستوى",
+  "room_tries": "المحاولات",
+  "close": "إغلاق"
+}

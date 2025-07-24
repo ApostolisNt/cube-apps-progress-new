@@ -4,6 +4,13 @@ type ReadTeamProgressRequest = {
   userId: string;
 };
 
+export type SingleRoom = {
+  room_name: string;
+  tries: number;
+  difficulty: string;
+  score: number;
+};
+
 export type TeamProgress = {
   team: {
     dateofplay: string;
@@ -25,12 +32,7 @@ export type TeamProgress = {
     picture: string;
     dateofbirth: null;
   }>;
-  rooms: Array<{
-    room_name: string;
-    tries: number;
-    difficulty: string;
-    score: number;
-  }>;
+  rooms: Array<SingleRoom>;
 };
 
 export async function getTeam(
