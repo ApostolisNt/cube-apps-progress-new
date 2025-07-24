@@ -1,5 +1,6 @@
 import { greenRooms, purpleRooms, redRooms, yellowRooms } from "../constants/rooms";
-import type { RoomVariation, RoomColorVariant } from "../types";
+import type { RoomColorVariant } from "../types/common";
+import type { RoomVariation } from "../types/rooms";
 
 const ROOM_VARIATIONS: Record<RoomColorVariant | "default", RoomVariation> = {
   physical: {

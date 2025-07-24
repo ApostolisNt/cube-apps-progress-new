@@ -8,7 +8,8 @@ import {
   type PhysicalRoom,
   type SkillsRoom,
 } from "../constants/rooms";
-import type { Rooms } from "../types";
+import type { Rooms } from "../types/rooms";
+
 
 export const roomsListsToShow = (rooms: Rooms) => {
   if (!rooms) return [];

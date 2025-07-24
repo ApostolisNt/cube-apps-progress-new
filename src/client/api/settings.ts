@@ -1,5 +1,5 @@
+import type { GameMode } from "../../types/common";
 import { getApiClient } from "./general";
-import type { GameMode } from "../../types";
 
 export async function getLocation(): Promise<string> {
   const client = await getApiClient();

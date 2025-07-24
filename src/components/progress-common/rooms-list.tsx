@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { getCustomRoomNames } from "../../client/api/settings";
-import type { RoomListProps } from "../../types";
 import { getRoomVariation } from "../../helpers/get-room-variation";
 import Room from "./room";
 import { useApp } from "../../context/app-context";
+import type { RoomListProps } from "../../types/components";
 
 const RoomsList = ({ rooms }: RoomListProps) => {
   const { location } = useApp();

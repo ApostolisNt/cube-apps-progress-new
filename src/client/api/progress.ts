@@ -1,5 +1,5 @@
+import type { ReadTeamProgressRequest, TeamProgress } from "../../types/api";
 import { getApiClient } from "./general";
-import type { ReadTeamProgressRequest, TeamProgress } from "../../types";
 
 export async function getTeam(request: ReadTeamProgressRequest): Promise<TeamProgress> {
   const client = await getApiClient();

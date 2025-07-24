@@ -1,5 +1,5 @@
 import { getApiClient } from "./general";
-import type { HealthResponse } from "../../types";
+import type { HealthResponse } from "../../types/api";
 
 export async function health(): Promise<HealthResponse> {
   const client = await getApiClient();

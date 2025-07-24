@@ -1,6 +1,6 @@
 import { useLocalization } from "../../context/localization-context";
 import { replaceUnderscoreWithSpace } from "../../helpers/general";
-import type { RoomProps } from "../../types";
+import type { RoomProps } from "../../types/components";
 import { RoomsLogo } from "../../utils/rooms-logo";
 
 const Room = ({ color, name, tries, score, difficulty, customName, animation }: RoomProps) => {
