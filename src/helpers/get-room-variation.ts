@@ -1,22 +1,7 @@
-import {
-  greenRooms,
-  purpleRooms,
-  redRooms,
-  yellowRooms,
-} from "../constants/rooms";
+import { greenRooms, purpleRooms, redRooms, yellowRooms } from "../constants/rooms";
+import type { RoomVariation, RoomColorVariant } from "../types";
 
-type AnimationType =
-  | "animate-slide-in-left"
-  | "animate-slide-in-right"
-  | "animate-slide-in-bottom";
-type ColorVariant = "physical" | "brain" | "skills" | "horror";
-
-export type RoomVariation = {
-  colorClass?: `text-${ColorVariant}` | "text-cube-primary";
-  animationClass?: AnimationType;
-};
-
-const ROOM_VARIATIONS: Record<ColorVariant | "default", RoomVariation> = {
+const ROOM_VARIATIONS: Record<RoomColorVariant | "default", RoomVariation> = {
   physical: {
     colorClass: "text-physical",
     animationClass: "animate-slide-in-left",
@@ -39,14 +24,10 @@ const ROOM_VARIATIONS: Record<ColorVariant | "default", RoomVariation> = {
   },
 };
 
-type RoomArrayType =
-  | typeof redRooms
-  | typeof greenRooms
-  | typeof yellowRooms
-  | typeof purpleRooms;
+type RoomArrayType = typeof redRooms | typeof greenRooms | typeof yellowRooms | typeof purpleRooms;
 
 const ROOM_GROUPS: Array<{
-  type: ColorVariant;
+  type: RoomColorVariant;
   rooms: RoomArrayType;
 }> = [
   { type: "physical", rooms: redRooms },
@@ -56,8 +37,6 @@ const ROOM_GROUPS: Array<{
 ];
 
 export const getRoomVariation = (room: string): RoomVariation => {
-  const roomGroup = ROOM_GROUPS.find((group) =>
-    group.rooms.includes(room as never)
-  );
+  const roomGroup = ROOM_GROUPS.find((group) => group.rooms.includes(room as never));
   return ROOM_VARIATIONS[roomGroup?.type || "default"];
 };

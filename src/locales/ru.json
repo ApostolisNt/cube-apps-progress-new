@@ -1,11 +1,11 @@
 {
-    "scan_for_activity": "результат для данного задания",
-    "score": "результат",
-    "team_activity": "задание для команды",
-    "time_left": "оставшееся время",
-    "welcome": "добро пожаловать",
-    "room_points": "очки",
-    "room_level": "уровень",
-    "room_tries": "попытки",
-    "close": "ЗАКРЫТЬ"
+  "scan_for_activity": "результат для данного задания",
+  "score": "результат",
+  "team_activity": "задание для команды",
+  "time_left": "оставшееся время",
+  "welcome": "добро пожаловать",
+  "room_points": "очки",
+  "room_level": "уровень",
+  "room_tries": "попытки",
+  "close": "ЗАКРЫТЬ"
 }

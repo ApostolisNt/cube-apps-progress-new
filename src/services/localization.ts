@@ -37,10 +37,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
  * Get nested value from object using dot notation
  * e.g., get(obj, 'nested.key') returns obj.nested.key
  */
-function getNestedValue(
-  obj: Record<string, unknown>,
-  path: string
-): string | undefined {
+function getNestedValue(obj: Record<string, unknown>, path: string): string | undefined {
   return path.split(".").reduce((current: unknown, key) => {
     return current && typeof current === "object"
       ? (current as Record<string, unknown>)[key]
@@ -52,10 +49,7 @@ function getNestedValue(
  * Replace placeholders in translation strings
  * e.g., "Hello {{name}}" with { name: "John" } becomes "Hello John"
  */
-function interpolate(
-  text: string,
-  params: Record<string, string | number> = {}
-): string {
+function interpolate(text: string, params: Record<string, string | number> = {}): string {
   return text.replace(/\{\{(\w+)\}\}/g, (match, key) => {
     return params[key]?.toString() || match;
   });

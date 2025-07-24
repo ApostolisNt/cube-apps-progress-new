@@ -12,9 +12,7 @@ const TimeZoneCheck = () => {
       if (!timezone) return;
 
       const clientTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      console.log(
-        `Client timezone: ${clientTimezone}, Server timezone: ${timezone}`
-      );
+      console.log(`Client timezone: ${clientTimezone}, Server timezone: ${timezone}`);
 
       if (timezone !== clientTimezone) {
         if (toastIdRef.current !== null) {

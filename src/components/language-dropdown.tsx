@@ -14,10 +14,7 @@ const LanguageDropdown = () => {
   useEffect(() => {
     const controller = new AbortController();
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -41,9 +38,7 @@ const LanguageDropdown = () => {
         setLanguages(languagesList);
 
         if (!languagesList.includes(defaultLanguage)) {
-          console.warn(
-            `Default language ${defaultLanguage} not found in available languages.`
-          );
+          console.warn(`Default language ${defaultLanguage} not found in available languages.`);
         }
 
         const selectedLang = languagesList.includes(defaultLanguage)
@@ -123,9 +118,7 @@ const LanguageDropdown = () => {
               >
                 <div
                   className={`size-7 overflow-hidden rounded-sm shadow-sm  ${
-                    currentLanguage === language
-                      ? "opacity-100"
-                      : "opacity-40 hover:opacity-90"
+                    currentLanguage === language ? "opacity-100" : "opacity-40 hover:opacity-90"
                   }`}
                 >
                   <img

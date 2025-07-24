@@ -39,9 +39,7 @@ const IdleView = () => {
           }
 
           if (!teamResponse.team.team_name) {
-            console.warn(
-              `Team name not found for bracelet code: ${braceletCode}`
-            );
+            console.warn(`Team name not found for bracelet code: ${braceletCode}`);
             setBraceletCode("");
             return;
           }
@@ -63,10 +61,7 @@ const IdleView = () => {
     <>
       <CubeBackgroundVideo key={location} src={getBackgroundVideo(location)} />
       <div className="flex flex-col items-center gap-4">
-        <BraceletInput
-          braceletCode={braceletCode}
-          handleBraceletChange={handleBraceletChange}
-        />
+        <BraceletInput braceletCode={braceletCode} handleBraceletChange={handleBraceletChange} />
       </div>
       <ScanWristband />
       <h1 className="fixed bottom-5 left-9 text-xs z-10 text-app-version">

@@ -1,12 +1,12 @@
 {
-    "scan_for_activity": "scannen voor activiteit",
-    "score": "score",
-    "team_activity": "teamactiviteit",
-    "time_left": "tijd over",
-    "welcome": "welkom",
-    "room_points": "punten",
-    "room_level": "niveau",
-    "room_tries": "pogingen",
-    "no_remaining_time": "00:00",
-    "close": "SLUITEN"
+  "scan_for_activity": "scannen voor activiteit",
+  "score": "score",
+  "team_activity": "teamactiviteit",
+  "time_left": "tijd over",
+  "welcome": "welkom",
+  "room_points": "punten",
+  "room_level": "niveau",
+  "room_tries": "pogingen",
+  "no_remaining_time": "00:00",
+  "close": "SLUITEN"
 }

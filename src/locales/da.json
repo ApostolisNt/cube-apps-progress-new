@@ -1,11 +1,11 @@
 {
-    "scan_for_activity": "scan for aktivitet",
-    "score": "score",
-    "team_activity": "teamaktivitet",
-    "time_left": "tid tilbage",
-    "welcome": "velkommen",
-    "room_points": "point",
-    "room_level": "niveau",
-    "room_tries": "forsøg",
-    "close": "LUK"
+  "scan_for_activity": "scan for aktivitet",
+  "score": "score",
+  "team_activity": "teamaktivitet",
+  "time_left": "tid tilbage",
+  "welcome": "velkommen",
+  "room_points": "point",
+  "room_level": "niveau",
+  "room_tries": "forsøg",
+  "close": "LUK"
 }

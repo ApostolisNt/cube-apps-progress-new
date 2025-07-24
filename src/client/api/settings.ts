@@ -1,4 +1,5 @@
 import { getApiClient } from "./general";
+import type { GameMode } from "../../types";
 
 export async function getLocation(): Promise<string> {
   const client = await getApiClient();
@@ -12,9 +13,9 @@ export async function getTimezone(): Promise<string> {
   return response;
 }
 
-export async function getGameMode(): Promise<"arena" | "arcade"> {
+export async function getGameMode(): Promise<GameMode> {
   const client = await getApiClient();
-  const response = await client.get<"arena" | "arcade">("api/settings?key=gameMode");
+  const response = await client.get<GameMode>("api/settings?key=gameMode");
   return response;
 }
 

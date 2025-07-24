@@ -44,9 +44,7 @@ const TimeLeft = () => {
   }, [remainingSeconds]);
 
   const displayTime =
-    remainingSeconds > 0
-      ? `${hours}:${minutes}:${seconds}`
-      : t("no_remaining_time");
+    remainingSeconds > 0 ? `${hours}:${minutes}:${seconds}` : t("no_remaining_time");
 
   useEffect(() => {
     if (!endTime) return;

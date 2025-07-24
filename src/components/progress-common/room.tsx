@@ -1,32 +1,12 @@
 import { useLocalization } from "../../context/localization-context";
 import { replaceUnderscoreWithSpace } from "../../helpers/general";
-import type { RoomVariation } from "../../helpers/get-room-variation";
+import type { RoomProps } from "../../types";
 import { RoomsLogo } from "../../utils/rooms-logo";
 
-type RoomProps = {
-  color: RoomVariation["colorClass"];
-  name: string;
-  tries: number;
-  score: number;
-  difficulty: string;
-  customName?: string;
-  animation: RoomVariation["animationClass"];
-};
-
-const Room = ({
-  color,
-  name,
-  tries,
-  score,
-  difficulty,
-  customName,
-  animation,
-}: RoomProps) => {
+const Room = ({ color, name, tries, score, difficulty, customName, animation }: RoomProps) => {
   const { t } = useLocalization();
   return (
-    <div
-      className={`relative w-[48%] h-[75px] rounded-lg m-1.5 border-2 ${animation} ${color}`}
-    >
+    <div className={`relative w-[48%] h-[75px] rounded-lg m-1.5 border-2 ${animation} ${color}`}>
       <div className="absolute top-0.5 right-4 w-3xs h-4 text-base text-right font-goth-medium">
         {replaceUnderscoreWithSpace(customName ? customName : name)}
       </div>
@@ -45,16 +25,12 @@ const Room = ({
 
         <div className="absolute left-58 top-8 w-max text-left tracking-wide">
           <p className="text-xs">{t("room_level")}:</p>
-          <p className="text-2xl tracking-wide leading-4 text-center">
-            {difficulty}
-          </p>
+          <p className="text-2xl tracking-wide leading-4 text-center">{difficulty}</p>
         </div>
 
         <div className="absolute right-4 top-8 w-max text-left tracking-wide">
           <p className="text-xs">{t("room_tries")}:</p>
-          <p className="text-2xl tracking-tighter leading-4 text-center">
-            {tries}
-          </p>
+          <p className="text-2xl tracking-tighter leading-4 text-center">{tries}</p>
         </div>
       </div>
     </div>

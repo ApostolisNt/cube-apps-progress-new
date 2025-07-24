@@ -4,8 +4,7 @@ import UserPicture from "./user-picture";
 const PhotoGrid = () => {
   const { teamData, gameMode } = useApp();
 
-  const team =
-    gameMode === "arena" ? teamData?.users.slice(0, 1) : teamData?.users;
+  const team = gameMode === "arena" ? teamData?.users.slice(0, 1) : teamData?.users;
 
   return (
     <div className="flex content-center h-24">

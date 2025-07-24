@@ -1,2 +1,1 @@
-export const replaceUnderscoreWithSpace = (str: string) =>
-  str.replace(/_/g, " ");
+export const replaceUnderscoreWithSpace = (str: string) => str.replace(/_/g, " ");

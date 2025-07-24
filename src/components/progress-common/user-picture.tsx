@@ -11,6 +11,7 @@ const UserPicture = ({ picture }: UserPictureProps) => {
       viewBox="0 0 89 89"
       className="size-24 mx-1.5 animate-slide-in-top"
     >
+      <title className="hidden">User profile picture</title>
       <g id="Layer_5" data-name="Layer 5">
         <image
           // href={`${window.ENV.URL_CUBE_API}/${picture.substr(2)}`}

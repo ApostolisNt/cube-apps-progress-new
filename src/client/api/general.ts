@@ -24,9 +24,7 @@ export class ApiClient {
   static async getInstance(): Promise<ApiClient> {
     if (!ApiClient.instance) {
       const baseUrl = await getApiBaseUrl();
-      console.info(
-        `Creating new API client instance with base URL [${baseUrl}]`
-      );
+      console.info(`Creating new API client instance with base URL [${baseUrl}]`);
       // Create new instance
       ApiClient.instance = new ApiClient(baseUrl);
     }
@@ -64,9 +62,7 @@ export class ApiClient {
 
     // If endpoint is absolute, don't prepend base URL path
     // Replace `//` with `/` to avoid double slashes
-    const path = endpoint.startsWith("/")
-      ? endpoint
-      : `${result.pathname}/${endpoint}`;
+    const path = endpoint.startsWith("/") ? endpoint : `${result.pathname}/${endpoint}`;
     const fullPath = path.replace(/\/+/g, "/");
 
     // Parse URL, as fullPath might contain query params

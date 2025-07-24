@@ -1,12 +1,6 @@
-import { createContext, useContext, type ReactNode } from "react";
-import type { LanguageCode } from "../constants/languages";
+import { createContext, useContext } from "react";
 import { getTranslation } from "../services/localization";
-
-
-type LocalizationContextType = {
-  currentLanguage: LanguageCode | undefined;
-  t: (key: string, params?: Record<string, string | number>) => string;
-};
+import type { LocalizationContextType, LocalizationProviderProps } from "../types";
 
 const LocalizationContext = createContext<LocalizationContextType | undefined>(undefined);
 
@@ -17,11 +11,6 @@ export function useLocalization() {
   }
   return context;
 }
-
-type LocalizationProviderProps = {
-  children: ReactNode;
-  language: LanguageCode | undefined;
-};
 
 export function LocalizationProvider({ children, language }: LocalizationProviderProps) {
   const t = (key: string, params?: Record<string, string | number>) => {

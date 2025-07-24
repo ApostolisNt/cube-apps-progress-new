@@ -1,19 +1,13 @@
 import { useEffect, useState } from "react";
 import { getCustomRoomNames } from "../../client/api/settings";
-import type { Rooms } from "../../helpers/get-room-list";
+import type { RoomListProps } from "../../types";
 import { getRoomVariation } from "../../helpers/get-room-variation";
 import Room from "./room";
 import { useApp } from "../../context/app-context";
 
-type RoomListProps = {
-  rooms: Rooms;
-};
-
 const RoomsList = ({ rooms }: RoomListProps) => {
   const { location } = useApp();
-  const [customRoomNames, setCustomRoomNames] = useState<
-    Record<string, string>
-  >({});
+  const [customRoomNames, setCustomRoomNames] = useState<Record<string, string>>({});
 
   useEffect(() => {
     const fetchCustomRoomNames = async () => {

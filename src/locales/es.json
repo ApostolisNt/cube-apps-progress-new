@@ -1,11 +1,11 @@
 {
-    "scan_for_activity": "buscar actividad",
-    "score": "puntaje",
-    "team_activity": "actividad del equipo",
-    "time_left": "tiempo restante",
-    "welcome": "bienvenido",
-    "room_points": "puntos",
-    "room_level": "nivel",
-    "room_tries": "intentos",
-    "close": "CERRAR"
+  "scan_for_activity": "buscar actividad",
+  "score": "puntaje",
+  "team_activity": "actividad del equipo",
+  "time_left": "tiempo restante",
+  "welcome": "bienvenido",
+  "room_points": "puntos",
+  "room_level": "nivel",
+  "room_tries": "intentos",
+  "close": "CERRAR"
 }

@@ -1,12 +1,12 @@
 {
-    "scan_for_activity": "scan for activity",
-    "score": "score",
-    "team_activity": "TEAM ACTIVITY",
-    "time_left": "time left",
-    "welcome": "welcome",
-    "room_points": "points",
-    "room_level": "level",
-    "room_tries": "tries",
-    "no_remaining_time": "00:00",
-    "close": "close"
+  "scan_for_activity": "scan for activity",
+  "score": "score",
+  "team_activity": "TEAM ACTIVITY",
+  "time_left": "time left",
+  "welcome": "welcome",
+  "room_points": "points",
+  "room_level": "level",
+  "room_tries": "tries",
+  "no_remaining_time": "00:00",
+  "close": "close"
 }

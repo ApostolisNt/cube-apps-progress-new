@@ -1,9 +1,5 @@
 import { getApiClient } from "./general";
-
-export type HealthResponse = {
-  roomsQueryTimeMs: number;
-  version: string;
-};
+import type { HealthResponse } from "../../types";
 
 export async function health(): Promise<HealthResponse> {
   const client = await getApiClient();
