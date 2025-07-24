@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocalization } from "../context/localization-context";
-import type { BraceletInputProps } from "../types";
+import type { BraceletInputProps } from "../types/components";
 
 const BraceletInput = ({ braceletCode, handleBraceletChange }: BraceletInputProps) => {
   const { t } = useLocalization();

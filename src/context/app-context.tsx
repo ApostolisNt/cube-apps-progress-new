@@ -1,7 +1,9 @@
 import { createContext, useContext, useState } from "react";
 import { VIEWS } from "../constants/general";
 import type { LanguageCode } from "../constants/languages";
-import type { AppContextType, AppProviderProps, Views, GameMode, TeamProgress } from "../types";
+import type { AppContextType, AppProviderProps, Views } from "../types/contexts";
+import type { TeamProgress } from "../types/api";
+import type { GameMode } from "../types/common";
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 

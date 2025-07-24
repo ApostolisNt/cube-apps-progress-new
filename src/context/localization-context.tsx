@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 import { getTranslation } from "../services/localization";
-import type { LocalizationContextType, LocalizationProviderProps } from "../types";
+import type { LocalizationContextType, LocalizationProviderProps } from "../types/contexts";
 
 const LocalizationContext = createContext<LocalizationContextType | undefined>(undefined);
 
