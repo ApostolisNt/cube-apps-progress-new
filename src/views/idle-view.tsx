@@ -7,6 +7,7 @@ import { getTeam } from "../client/api/progress";
 import CubeBackgroundVideo from "../components/cube-background-video";
 import { getBackgroundVideo } from "../helpers/get-background-video";
 import ScanWristband from "../components/scan-wristband";
+import packageJson from "../../package.json";
 
 const IdleView = () => {
   const { setCurrentView, setTeamName, location, setTeamData } = useApp();
@@ -68,6 +69,9 @@ const IdleView = () => {
         />
       </div>
       <ScanWristband />
+      <h1 className="fixed bottom-5 left-9 text-xs z-10 text-app-version">
+        v{packageJson.version}
+      </h1>
     </>
   );
 };

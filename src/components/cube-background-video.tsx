@@ -3,8 +3,6 @@ type CubeBackgroundVideoProps = {
 };
 
 const CubeBackgroundVideo = ({ src }: CubeBackgroundVideoProps) => {
-  console.log(`Background video source: ${src}`);
-  
   return (
     <video
       autoPlay

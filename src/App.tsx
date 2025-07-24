@@ -7,6 +7,9 @@ import LanguageDropdown from "./components/language-dropdown";
 import ProgressView from "./views/progress-view";
 import { useEffect } from "react";
 import { getGameMode, getLocation, getTimezone } from "./client/api/settings";
+import TimeZoneCheck from "./components/timezone-check";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
   const {
@@ -33,12 +36,12 @@ export default function App() {
     fetchLocation();
   }, [setLocation, setTimezone, setGameMode]);
 
-  console.log(`Current view: ${currentView}`);
-
   return (
     <LocalizationProvider language={currentLanguage}>
+      <ToastContainer />
       <HealthCheck />
       <LanguageDropdown />
+      <TimeZoneCheck />
       <div className="absolute top-0 w-screen h-screen flex justify-center">
         {currentView === VIEWS.IDLE && <IdleView />}
         {currentView === VIEWS.PROGRESS && <ProgressView />}

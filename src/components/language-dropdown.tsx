@@ -99,19 +99,27 @@ const LanguageDropdown = () => {
         >
           <div className="flex flex-col items-center py-1">
             {languages.map((language, index) => (
-              <button
+              <div
                 key={language}
-                type="button"
+                role="dialog"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleLanguageSelect(language);
                 }}
-                className="w-8 h-8 flex items-center justify-center my-1"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleLanguageSelect(language);
+                  }
+                }}
+                className="w-8 h-8 flex items-center justify-center my-1 cursor-pointer"
                 style={{
                   opacity: isOpen ? 1 : 0,
                   transform: isOpen ? "translateY(0)" : "translateY(-10px)",
                   transitionDelay: isOpen ? `${index * 30}ms` : "0ms",
                 }}
+                aria-label={`Select ${language} language`}
               >
                 <div
                   className={`size-7 overflow-hidden rounded-sm shadow-sm  ${
@@ -130,7 +138,7 @@ const LanguageDropdown = () => {
                     }}
                   />
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </div>

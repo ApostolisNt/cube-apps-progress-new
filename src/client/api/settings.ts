@@ -14,8 +14,14 @@ export async function getTimezone(): Promise<string> {
 
 export async function getGameMode(): Promise<"arena" | "arcade"> {
   const client = await getApiClient();
-  const response = await client.get<"arena" | "arcade">(
-    "api/settings?key=gameMode"
+  const response = await client.get<"arena" | "arcade">("api/settings?key=gameMode");
+  return response;
+}
+
+export async function getCustomRoomNames(location: string): Promise<string> {
+  const client = await getApiClient();
+  const response = await client.get<string>(
+    `api/settings/rooms/customRoomNames.php?location=${location}`
   );
   return response;
 }
